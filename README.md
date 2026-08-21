@@ -4,7 +4,7 @@
 [![version](https://img.shields.io/github/v/release/KanG-ciyuan/kang-agent-workforce?label=version)](https://github.com/KanG-ciyuan/kang-agent-workforce/releases)
 [![core skills](https://img.shields.io/badge/core%20skills-4-0969da)](#岗位技能)
 [![tests](https://img.shields.io/badge/local%20tests-3%20passed-2ea44f)](tests/)
-[![license](https://img.shields.io/badge/license-Kang%20terms-6f42c1)](LICENSE)
+[![license](https://img.shields.io/badge/license-MIT-6f42c1)](LICENSE)
 
 Kang 的可复用产品研发数字员工团队。它把产品架构、企业流程、B2B UX 和产品验收拆成可以显式调用、独立交接和独立验收的 Skills。
 
@@ -129,7 +129,7 @@ Maintained by Kang. GitHub: https://github.com/KanG-ciyuan/
 
 ## License
 
-Copyright (c) Kang. See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE). This public repository contains reusable agent orchestration logic only; the enterprise AI process diagnosis product and its private runtime Skills are separate and are not included.
 
 ## Author
 
