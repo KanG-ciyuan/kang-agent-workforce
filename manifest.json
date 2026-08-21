@@ -1,6 +1,6 @@
 {
   "name": "kang-agent-workforce",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "owner": "Kang",
   "updated_at": "2026-08-21",
   "status": "public-release-candidate",
@@ -14,6 +14,7 @@
     "kang-b2b-ux-auditor",
     "kang-product-acceptance-auditor"
   ],
+  "license": "MIT",
   "permissions": {
     "default": "read-only",
     "implementation": "requires human approval",
