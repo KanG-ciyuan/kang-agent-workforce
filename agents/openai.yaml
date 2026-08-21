@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kang Agent Workforce"
+  short_description: "显式编排产品研发数字员工团队"
+  default_prompt: "使用 $kang-agent-workforce 编排岗位 Skill，生成可追溯交接并在实施前等待人工批准。"

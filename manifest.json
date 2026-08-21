@@ -1,0 +1,33 @@
+{
+  "name": "kang-agent-workforce",
+  "version": "0.1.0",
+  "owner": "Kang",
+  "updated_at": "2026-08-21",
+  "status": "public-release-candidate",
+  "maturity_tier": "production",
+  "lifecycle_stage": "initial-release",
+  "entrypoint": "SKILL.md",
+  "target_platforms": ["codex", "agent-skills-compatible"],
+  "coordinated_skills": [
+    "kang-product-architect",
+    "kang-enterprise-process-reviewer",
+    "kang-b2b-ux-auditor",
+    "kang-product-acceptance-auditor"
+  ],
+  "permissions": {
+    "default": "read-only",
+    "implementation": "requires human approval",
+    "deployment": "requires human approval",
+    "publication": "requires human approval"
+  },
+  "release_gates": [
+    "package validation",
+    "explicit invocation contract",
+    "secret scan",
+    "feature branch publication",
+    "pull request review",
+    "versioned release",
+    "discovery verification",
+    "isolated installation check"
+  ]
+}

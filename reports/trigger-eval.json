@@ -1,0 +1,137 @@
+{
+  "ok": true,
+  "threshold": 0.3,
+  "description_concepts": [
+    "handoff",
+    "orchestration",
+    "product",
+    "roles"
+  ],
+  "missing_description_concepts": [],
+  "summary": {
+    "total": 9,
+    "passed": 9,
+    "false_positive": 0,
+    "false_negative": 0,
+    "pass_rate": 1.0
+  },
+  "failures": [],
+  "results": {
+    "should_trigger": [
+      {
+        "prompt": "使用 Kang 的数字员工团队审查这个产品，并通过交接文档轮岗",
+        "family": "cn_product_team",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.75,
+        "matched_concepts": [
+          "handoff",
+          "product",
+          "roles"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "派出多个专业子代理分别做架构、UX 和验收，实施前设置人工批准门",
+        "family": "cn_multi_agent",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.5,
+        "matched_concepts": [
+          "handoff",
+          "roles"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "Orchestrate Kang specialist agents with explicit handoffs and an independent acceptance gate.",
+        "family": "en_orchestration",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.5,
+        "matched_concepts": [
+          "orchestration",
+          "roles"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "建立一个总控 Agent，按产品架构、流程、UX、验收顺序调度子代理并落盘交接",
+        "family": "explicit_workforce",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "handoff",
+          "orchestration",
+          "product",
+          "roles"
+        ],
+        "negative_pattern": null
+      }
+    ],
+    "should_not_trigger": [
+      {
+        "prompt": "采访一线员工并还原他的报销流程",
+        "family": "runtime_workflow_mapping",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "分析这份企业 Excel 里的证据冲突",
+        "family": "runtime_material_analysis",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "把这段中文翻译成英文",
+        "family": "translation",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "只修改按钮颜色",
+        "family": "single_frontend_edit",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": null
+      }
+    ],
+    "near_neighbor": [
+      {
+        "prompt": "只让一个产品经理 Agent 给我一些建议，不需要岗位交接或多 Agent 编排",
+        "family": "single_agent_advice",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "handoff",
+          "orchestration",
+          "product",
+          "roles"
+        ],
+        "negative_pattern": "不需要岗位交接"
+      }
+    ]
+  }
+}

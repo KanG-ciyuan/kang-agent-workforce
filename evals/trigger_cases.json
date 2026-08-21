@@ -1,0 +1,38 @@
+{
+  "recommended_threshold": 0.3,
+  "description_required_concepts": ["orchestration", "roles", "handoff"],
+  "positive_concepts": {
+    "orchestration": ["orchestrate", "multi-agent", "多 Agent", "多智能体", "总控", "编排"],
+    "roles": ["digital employee", "specialist", "role", "数字员工", "岗位", "子代理"],
+    "handoff": ["handoff", "review gate", "交接", "复核", "批准门"],
+    "product": ["product", "产品", "SaaS", "研发"]
+  },
+  "negative_patterns": [
+    "员工流程摸排",
+    "分析这份企业材料",
+    "只写一封邮件",
+    "翻译一下",
+    "单个页面改颜色",
+    "one-off translation"
+    ,"不需要岗位交接"
+  ],
+  "should_trigger": [
+    {"text": "使用 Kang 的数字员工团队审查这个产品，并通过交接文档轮岗", "family": "cn_product_team"},
+    {"text": "派出多个专业子代理分别做架构、UX 和验收，实施前设置人工批准门", "family": "cn_multi_agent"},
+    {"text": "Orchestrate Kang specialist agents with explicit handoffs and an independent acceptance gate.", "family": "en_orchestration"},
+    {"text": "建立一个总控 Agent，按产品架构、流程、UX、验收顺序调度子代理并落盘交接", "family": "explicit_workforce"}
+  ],
+  "should_not_trigger": [
+    {"text": "采访一线员工并还原他的报销流程", "family": "runtime_workflow_mapping"},
+    {"text": "分析这份企业 Excel 里的证据冲突", "family": "runtime_material_analysis"},
+    {"text": "把这段中文翻译成英文", "family": "translation"},
+    {"text": "只修改按钮颜色", "family": "single_frontend_edit"}
+  ],
+  "near_neighbor": [
+    {
+      "text": "只让一个产品经理 Agent 给我一些建议，不需要岗位交接或多 Agent 编排",
+      "family": "single_agent_advice",
+      "expected_trigger": false
+    }
+  ]
+}
