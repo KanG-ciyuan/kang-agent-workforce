@@ -1,0 +1,13 @@
+cases:
+  - id: architecture-review
+    prompt: "审查一个企业 SaaS 产品的入口、角色权限和页面边界"
+    expected_skill: kang-product-architect
+    rejected_skills: [kang-enterprise-process-reviewer, kang-b2b-ux-auditor]
+  - id: process-review
+    prompt: "检查员工摸排、证据核验和负责人决策之间的业务交接"
+    expected_skill: kang-enterprise-process-reviewer
+    rejected_skills: [kang-product-architect]
+  - id: acceptance
+    prompt: "从干净入口验收员工、核验人员和负责人能否完成任务"
+    expected_skill: kang-product-acceptance-auditor
+    rejected_skills: [kang-b2b-ux-auditor]

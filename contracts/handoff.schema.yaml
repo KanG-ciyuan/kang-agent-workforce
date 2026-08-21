@@ -1,0 +1,18 @@
+version: "0.1.0"
+required:
+  - run_id
+  - skill_name
+  - skill_version
+  - objective
+  - input_paths
+  - output_path
+  - evidence_status
+  - next_action
+evidence_status:
+  - confirmed
+  - inferred
+  - to_verify
+permissions:
+  default: read_only
+  implementation: requires_human_approval
+  deployment: requires_human_approval

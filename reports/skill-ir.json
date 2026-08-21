@@ -1,0 +1,81 @@
+{
+  "schema_version": "2.0.0-kang-lite",
+  "generated_at": "2026-08-21",
+  "package": {
+    "name": "kang-agent-workforce",
+    "version": "0.1.0",
+    "owner": "Kang",
+    "maturity_tier": "production",
+    "lifecycle_stage": "initial-release",
+    "maintenance": {}
+  },
+  "intent": {
+    "description": "Orchestrate Kang's reusable product-development digital employee Skills across projects. Use when a task needs explicit role delegation, handoff contracts, review gates, or multi-agent delivery. Do not use as a product runtime workflow or as a substitute for human product decisions.",
+    "job_to_be_done": "Orchestrate Kang's reusable product-development digital employee Skills across projects. Use when a task needs explicit role delegation, handoff contracts, review gates, or multi-agent delivery. Do not use as a product runtime workflow or as a substitute for human product decisions.",
+    "target_users": [
+      "Kang operator"
+    ],
+    "inputs": [],
+    "outputs": [],
+    "exclusions": [],
+    "kang_defaults": {}
+  },
+  "triggers": {
+    "should_trigger": [
+      "使用 Kang 的数字员工团队审查这个产品，并通过交接文档轮岗",
+      "派出多个专业子代理分别做架构、UX 和验收，实施前设置人工批准门",
+      "Orchestrate Kang specialist agents with explicit handoffs and an independent acceptance gate.",
+      "建立一个总控 Agent，按产品架构、流程、UX、验收顺序调度子代理并落盘交接"
+    ],
+    "should_not_trigger": [
+      "采访一线员工并还原他的报销流程",
+      "分析这份企业 Excel 里的证据冲突",
+      "把这段中文翻译成英文",
+      "只修改按钮颜色"
+    ],
+    "near_neighbor": [
+      "只让一个产品经理 Agent 给我一些建议，不需要岗位交接或多 Agent 编排"
+    ]
+  },
+  "workflow": {
+    "router_rules": [],
+    "compact_workflow": [],
+    "gate_ladder": [],
+    "output_contract": []
+  },
+  "resources": {
+    "references": [],
+    "scripts": [],
+    "evals": [
+      "evals/trigger_cases.json",
+      "evals/trigger_cases.yaml"
+    ],
+    "reports": [
+      "reports/creation-handoff.md",
+      "reports/prior-art-research.md",
+      "reports/skill-ir.json",
+      "reports/trigger-eval.json"
+    ]
+  },
+  "portability": {
+    "canonical_format": null,
+    "adapter_targets": [
+      "openai",
+      "claude",
+      "generic",
+      "agent-skills-compatible"
+    ],
+    "activation": {},
+    "execution": {},
+    "trust": {},
+    "permissions": {},
+    "degradation": {}
+  },
+  "gates": {},
+  "evidence_boundary": {
+    "generated_reports_are_evidence": true,
+    "planned_work_is_evidence": false,
+    "missing_external_or_human_evidence_label": "missing evidence",
+    "public_claim_policy": "claim only what local validation, install proof, human review, or provider-backed evidence actually supports"
+  }
+}
