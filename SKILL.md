@@ -3,7 +3,7 @@ name: kang-agent-workforce
 description: Orchestrate Kang's reusable product-development digital employee Skills across projects. Use when a task needs explicit role delegation, handoff contracts, review gates, or multi-agent delivery. Do not use as a product runtime workflow or as a substitute for human product decisions.
 metadata:
   author: Kang
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Kang Agent Workforce Orchestrator
