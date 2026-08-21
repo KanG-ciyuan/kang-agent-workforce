@@ -1,10 +1,29 @@
 # Kang Agent Workforce
 
+[![status](https://img.shields.io/badge/status-public%20release-2ea44f)](https://github.com/KanG-ciyuan/kang-agent-workforce/releases)
+[![version](https://img.shields.io/github/v/release/KanG-ciyuan/kang-agent-workforce?label=version)](https://github.com/KanG-ciyuan/kang-agent-workforce/releases)
+[![core skills](https://img.shields.io/badge/core%20skills-4-0969da)](#岗位技能)
+[![tests](https://img.shields.io/badge/local%20tests-3%20passed-2ea44f)](tests/)
+[![license](https://img.shields.io/badge/license-Kang%20terms-6f42c1)](LICENSE)
+
 Kang 的可复用产品研发数字员工团队。它把产品架构、企业流程、B2B UX 和产品验收拆成可以显式调用、独立交接和独立验收的 Skills。
 
 ## 它解决什么问题
 
 它不是企业流程诊断产品本身，也不是员工摸排 Agent。它解决的是“如何让多个专业岗位协作完成产品研发审查和交付”的问题：谁先做、依据什么、交给谁、失败如何退回、什么时候必须由 Kang 决策。
+
+## 岗位技能
+
+总控不会把岗位正文嵌套进自己的安装目录，而是通过明确名称关联四个独立仓库：
+
+| 数字员工 | 独立 Skill | 负责什么 |
+|---|---|---|
+| 产品架构 | [`kang-product-architect`](https://github.com/KanG-ciyuan/kang-product-architect) | 入口、角色、权限、页面边界 |
+| 企业流程 | [`kang-enterprise-process-reviewer`](https://github.com/KanG-ciyuan/kang-enterprise-process-reviewer) | 流程责任、证据门、失败升级 |
+| B2B UX | [`kang-b2b-ux-auditor`](https://github.com/KanG-ciyuan/kang-b2b-ux-auditor) | 任务可理解性、导航、状态反馈 |
+| 产品验收 | [`kang-product-acceptance-auditor`](https://github.com/KanG-ciyuan/kang-product-acceptance-auditor) | 场景验收、证据、发布阻塞 |
+
+安装总控后，按需安装岗位 Skill；总控 README 和 `SKILL.md` 是关联入口，不会把四个岗位的全文塞进当前上下文。
 
 ## 目录
 
@@ -38,7 +57,7 @@ Skill 正文不会预加载到所有项目上下文。调用时只加载当前�
 
 ## 安装
 
-本仓库只安装总控 Skill。四个岗位是独立 Skill 包，分别安装在 `/Users/kang/.codex/skills/<skill-name>/`；不要把多个可发现的 `SKILL.md` 嵌套进总控安装目录，否则 Codex 会发现重复或产生调用歧义。当前仓库不包含密钥，也不要求任何外部服务凭据。
+本仓库只安装总控 Skill。四个岗位是独立 Skill 包，分别安装到 Codex 的个人 Skills 目录；不要把多个可发现的 `SKILL.md` 嵌套进总控安装目录，否则会产生重复发现或调用歧义。当前仓库不包含密钥，也不要求任何外部服务凭据。
 
 从 GitHub 安装前，请确认本机已有 Git、Node.js/npm 和 Codex：
 
@@ -60,6 +79,10 @@ npx --version
 ```bash
 npx skills add KanG-ciyuan/kang-agent-workforce --list
 npx skills add KanG-ciyuan/kang-agent-workforce
+npx skills add KanG-ciyuan/kang-product-architect
+npx skills add KanG-ciyuan/kang-enterprise-process-reviewer
+npx skills add KanG-ciyuan/kang-b2b-ux-auditor
+npx skills add KanG-ciyuan/kang-product-acceptance-auditor
 ```
 
 安装后可以这样验证：
@@ -83,7 +106,7 @@ python3 "${CODEX_HOME:-$HOME/.codex}/skills/kang-meta-skill/scripts/validate_ski
 
 **Codex 显示两个同名 Skill**
 
-检查是否既安装了独立岗位目录，又把仓库的整个 `skills/` 目录嵌套复制进了总控目录。保留顶层的五个独立入口，不要嵌套重复安装。
+检查是否把岗位仓库重复嵌套进总控目录。总控和四个岗位必须是五个独立入口。
 
 **总控没有调用预期岗位**
 
