@@ -6,7 +6,7 @@
 [![tests](https://img.shields.io/badge/local%20tests-3%20passed-2ea44f)](tests/)
 [![license](https://img.shields.io/badge/license-MIT-6f42c1)](LICENSE)
 
-Kang 的可复用产品研发数字员工团队。它把产品架构、企业流程、B2B UX 和产品验收拆成可以显式调用、独立交接和独立验收的 Skills。
+Kang 的可复用产品研发数字员工团队。当前关联的四个岗位 Skill 已升级到 `v0.2.0`，把产品架构、企业流程、B2B UX 和产品验收拆成可以显式调用、独立交接和独立验收的专业协议。
 
 ## 它解决什么问题
 

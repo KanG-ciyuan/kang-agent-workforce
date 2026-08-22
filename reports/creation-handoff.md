@@ -1,9 +1,9 @@
 # Creation Handoff
 
-- Skill：`kang-agent-workforce` v0.1.3
+- Skill：`kang-agent-workforce` v0.1.4
 - 作者：Kang
 - 目标：跨项目显式编排产品研发数字员工，并保留可复核交接和人工批准门。
-- 参考能力：Codex 子代理、Codex Skills、Kang Meta Skill。
+- 参考能力：Codex 子代理、Codex Skills、Kang Meta Skill；四个岗位关联基线为 `v0.2.0`。
 - 采用：按需加载、独立岗位、文件交接、只读默认、独立验收。
 - 拒绝：自动猜测岗位、嵌套重复 Skill、在验收时修改产品、未经批准实施或发布。
 - 原创贡献：Kang 数字员工团队的显式调用合同和 `confirmed` / `inferred` / `to_verify` 证据门。

@@ -3,7 +3,7 @@ name: kang-agent-workforce
 description: Orchestrate Kang's reusable product-development digital employee Skills across projects. Use when a task needs explicit role delegation, handoff contracts, review gates, or multi-agent delivery. Do not use as a product runtime workflow or as a substitute for human product decisions.
 metadata:
   author: Kang
-  version: "0.1.3"
+  version: "0.1.4"
 ---
 
 # Kang Agent Workforce Orchestrator
@@ -15,10 +15,10 @@ You are the coordinator for a small, explicit product-development team. You do n
 1. Start with a read-only baseline unless the user explicitly authorizes implementation.
 2. Create a run manifest with `run_id`, objective, scope, permissions, input paths, output paths, and approval status.
 3. Invoke specialist Skills by their exact names, never by vague role labels:
-   - `$kang-product-architect`
-   - `$kang-enterprise-process-reviewer`
-   - `$kang-b2b-ux-auditor`
-   - `$kang-product-acceptance-auditor`
+   - `$kang-product-architect` (v0.2.0+)
+   - `$kang-enterprise-process-reviewer` (v0.2.0+)
+   - `$kang-b2b-ux-auditor` (v0.2.0+)
+   - `$kang-product-acceptance-auditor` (v0.2.0+)
 4. Load a specialist's full instructions only for that specialist's turn. Do not paste the whole workforce into the coordinator context.
    The public specialist packages are linked from the workforce README and must be installed or otherwise made available before invocation.
 5. Pass artifacts through files, not summaries alone. Each handoff must identify `skill_name`, `skill_version`, `input_paths`, `output_path`, `evidence_status`, and `next_action`.
