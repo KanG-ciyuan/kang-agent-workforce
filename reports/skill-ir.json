@@ -3,7 +3,7 @@
   "generated_at": "2026-08-22",
   "package": {
     "name": "kang-agent-workforce",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "owner": "Kang",
     "maturity_tier": "production",
     "lifecycle_stage": "initial-release",

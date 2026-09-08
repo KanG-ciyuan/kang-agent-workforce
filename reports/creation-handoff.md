@@ -1,6 +1,6 @@
 # Creation Handoff
 
-- Skill：`kang-agent-workforce` v0.1.4
+- Skill：`kang-agent-workforce` v0.1.5
 - 作者：Kang
 - 目标：跨项目显式编排产品研发数字员工，并保留可复核交接和人工批准门。
 - 参考能力：Codex 子代理、Codex Skills、Kang Meta Skill；四个岗位关联基线为 `v0.2.0`。
